@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Player} from "../../models/Player";
+import {Player} from "../../../shared/models/Player";
+import {environment} from "../../../../environments/environment";
 
 const httpOptions= {
   headers: new HttpHeaders({
@@ -14,7 +15,7 @@ const httpOptions= {
 })
 export class PlayerService {
 
-  baseUrl: string = 'http://localhost:8080/players';
+  baseUrl: string = environment.baseURL+'/players';
 
   constructor(private http: HttpClient) { }
 

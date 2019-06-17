@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Player} from "../../models/Player";
-import {PlayerService} from "../../services/player/player.service";
+import {Player} from "../../../../../shared/models/Player";
+import {PlayerService} from "../../../../../core/services/player/player.service";
 
 @Component({
   selector: 'app-player-item',

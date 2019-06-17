@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {environment} from "../../../../environments/environment";
 
 const httpOptions= {
   headers: new HttpHeaders({
@@ -13,7 +14,7 @@ const httpOptions= {
 })
 export class GameService {
 
-  baseUrl: string = 'http://localhost:8080/games/';
+  baseUrl: string = environment.baseURL+'/games';
   serviceUrl: string = '';
   argumentUrl: string = '';
 

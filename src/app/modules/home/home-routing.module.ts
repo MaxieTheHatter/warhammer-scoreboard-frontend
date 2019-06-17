@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 import {TodosComponent} from "./components/todos/todos.component";
-import {AboutComponent} from "./components/pages/about/about.component";
-import {PlayersComponent} from "./components/pages/players/players.component";
+import {AboutComponent} from "./pages/about/about.component";
+import {PlayerComponent} from "./components/player/player.component";
 
 const routes: Routes = [
   {
@@ -13,7 +13,7 @@ const routes: Routes = [
     component: AboutComponent
   },{
   path: 'players',
-    component: PlayersComponent
+    component: PlayerComponent
   }
 ];
 
@@ -25,4 +25,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class AppRoutingModule { }
+export class HomeRoutingModule { }
