@@ -1,0 +1,28 @@
+<h2>Add new player</h2>
+<form class="form" (ngSubmit)="onSubmit()">
+  <br/>
+  <div class="form-group">
+    <label>Player name</label><br/>
+    <input type="text" [(ngModel)]="playerName" name="playerName" class="form-control">
+  </div>
+  <br/>
+  <div class="form-group">
+    <label>Army</label><br/>
+    <input type="text" [(ngModel)]="playerArmy" name="playerArmy" class="form-control">
+  </div>
+  <br/>
+  <div class="form-group">
+    <label>Army resource</label><br/>
+    <input type="radio" [(ngModel)]="resource" name="resource" [value]="'none'">None<br>
+    <input type="radio" [(ngModel)]="resource" name="resource" [value]="'custom'">Custom<br/>
+    <div [hidden]="resource !== 'custom'">
+      <label>Resource type:</label><br/>
+      <input type="text" [(ngModel)]="resourceType" name="resourceType" class="form-control"><br/>
+    </div>
+    <div [hidden]="resource !== 'custom'">
+      <label>Resource Amount:</label><br/>
+      <input type="number" [(ngModel)]="resourceAmount" name="resourceAmount" class="form-control">
+    </div>
+  </div><br/>
+  <input type="submit" value="Add" class="btn">
+</form>

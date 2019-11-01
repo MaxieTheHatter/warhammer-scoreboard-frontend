@@ -1,0 +1,18 @@
+<div [ngClass]="setClasses()">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Army</th>
+      <th>Resource: {{player.armyResource.type}}</th>
+      <th>Score</th>
+    </tr>
+    <tr>
+      <td>{{player.id}}</td>
+      <td>{{player.name}}</td>
+      <td>{{player.army}}</td>
+      <td>{{player.armyResource.resource}}</td>
+      <td>{{player.score}}</td>
+    </tr>
+  </table>
+</div>
